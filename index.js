@@ -14,7 +14,7 @@ const winPatterns = [
     [2,5,8],
     [2,4,6],
     [3,4,5],
-    [3,7,8]
+    [6,7,8]
 ];
 // reset game button  **applied in both new  & reset btn.
 const resetGame = () =>{
@@ -27,6 +27,7 @@ msgContainer.classList.add("hide");
 boxes.forEach((box)=>{
 box.addEventListener("click",()=>{
   console.log("box was clicked");
+  
     if(turnO){
         box.innerText = "O";
         turnO = false;
@@ -90,7 +91,7 @@ const checkWinner = () => {
 
          if(pos1 != "" && pos2 != "" && pos3 != ""){
             if(pos1 ===  pos2 && pos2 ===  pos3){
-              
+             
                 showWinner(pos1);
                 return true;
             }
